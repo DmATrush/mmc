@@ -91,6 +91,9 @@ def learn_click():
     learn_wind.hide()
     menu_wind.show()
 
+def imprinting():
+    print(bool())
+
 btn_home.clicked.connect(learn_click)
 buh_menu2.clicked.connect(is_clicked_learning)
 buh_menu1.clicked.connect(is_clicked_menu1)
