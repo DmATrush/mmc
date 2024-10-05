@@ -87,6 +87,11 @@ def is_clicked_learning():
     menu_wind.hide()
     learn_wind.show()
 
+def learn_click():
+    learn_wind.hide()
+    menu_wind.show()
+
+btn_home.clicked.connect(learn_click)
 buh_menu2.clicked.connect(is_clicked_learning)
 buh_menu1.clicked.connect(is_clicked_menu1)
 menu.clicked.connect(menu_is_clicked)
