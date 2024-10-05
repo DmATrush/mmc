@@ -6,17 +6,22 @@ app = QApplication([])
 
 from layout import *
 from data import *
+from suffer_from_learning import *
 
 i = 0
 
 winda = QWidget()
 menu_wind = QWidget()
+learn_wind = QWidget()
 winda.resize(500,600)
 menu_wind.resize(500,600)
+learn_wind.resize(500, 600)
 winda.setWindowTitle('Memory Card')
 menu_wind.setWindowTitle('Menu MMC')
+learn_wind.setWindowTitle('Learn')
 winda.setLayout(main_line_quizzi)
 menu_wind.setLayout(main_menu)
+learn_wind.setLayout(layout_learn)
 menu_wind.show()
 shuffle(questiones)
 questiones[i].show_questione(quest_lb, rbtns)
@@ -78,9 +83,11 @@ def menu_is_clicked():
     menu_wind.show()
 
 
+def is_clicked_learning():
+    menu_wind.hide()
+    learn_wind.show()
 
-
-
+buh_menu2.clicked.connect(is_clicked_learning)
 buh_menu1.clicked.connect(is_clicked_menu1)
 menu.clicked.connect(menu_is_clicked)
 buh_menu3.clicked.connect(lambda : app.exit())
