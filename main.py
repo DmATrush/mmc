@@ -7,9 +7,11 @@ app = QApplication([])
 from layout import *
 from data import *
 from suffer_from_learning import *
+from style import style
 
 i = 0
 
+app.setStyleSheet(style)
 winda = QWidget()
 menu_wind = QWidget()
 learn_wind = QWidget()
@@ -92,8 +94,19 @@ def learn_click():
     menu_wind.show()
 
 def imprinting():
-    print(bool())
+    print(answers.currentItem().text())
+    if answers.currentItem().text() == None:
+        pass
+    else:
+        for question in questiones:
+            if answers.currentItem().text() == question.text:
+                masge = QMessageBox()
+                masge.setText(question.true)
+                masge.exec_()
 
+
+
+btn_showanswer.clicked.connect(imprinting)
 btn_home.clicked.connect(learn_click)
 buh_menu2.clicked.connect(is_clicked_learning)
 buh_menu1.clicked.connect(is_clicked_menu1)
