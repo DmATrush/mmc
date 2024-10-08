@@ -5,5 +5,10 @@ QPushButton {
     padding: lem;
     font: 14px "Arial";
 }
-
+QRadioButton {
+    color: red;
+    border: 2px solid blue;
+    padding: lem;
+    font: 14px "Arial"
+}
 """
