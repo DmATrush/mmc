@@ -11,4 +11,10 @@ QRadioButton {
     padding: lem;
     font: 14px "Arial"
 }
+QLabel {
+    color: black;
+    border: 1px solid green;
+    padding: lem;
+    font: 15px "Arial"
+}
 """
